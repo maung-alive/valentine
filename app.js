@@ -1,27 +1,35 @@
 var button = null;
 const openBtn = document.querySelector(".heart");
-const innerContent = document.querySelector(".inner-container")
+const innerContent = document.querySelector(".inner-container");
 
 const mainContent = `
   <h1 class="question-text">
     Will you be my valentine?
     <span class="line"></span>
   </h1>
+  <span class="clicked"></span>
   <div class="btn-container">
     <button class="pushable" id="positive">
       Yes
    </button>
-    <button class="pushable" id="negative">
+    <button class="pushable" id="negative" onClick="noClicked()">
       No
     </button>
   </div>
 `
 
+const noClicked = () => {
+  document.querySelector('.clicked').innerHTML = "No is No";
+  setTimeout(() => {
+    document.querySelector('.clicked').innerHTML = "";
+  }, 5000);
+}
+
 openBtn.addEventListener('click', () => {
   let dataOpen = openBtn.getAttribute('data-open');
   if(dataOpen == 'false'){
-    openBtn.style.backgroundColor = 'aliceblue';
-    openBtn.style.color = '#ff0073'
+    openBtn.style.backgroundColor = '#ffc5e6';
+    openBtn.style.color = '#ff2644'
     openBtn.style.top = '0%';
     innerContent.style.height = '50vh';
     innerContent.style.padding ='50px';

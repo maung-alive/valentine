@@ -8,7 +8,10 @@ box-sizing: border-box;
 
 .inner-container {
   position: relative;
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffc5e6;
   width: 40vw;
   padding: 2px;
   border-radius: 1rem;
@@ -26,18 +29,19 @@ box-sizing: border-box;
   padding-bottom: 0.7rem;
   padding-left: 1.3rem;
   padding-right: 1.3rem;
-  background: #ff0073;
-  border: 4px solid aliceblue;
+  background: #ff2644;
+  border: 4px solid #ffc5e6;
   border-radius: 50%;
-  color: aliceblue;
+  color: #ffc5e6;
   font-size: 1.5rem;
   font-weight: 700;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   cursor: pointer;
+  animation: heart-animation 1s ease-in;
 }
 
 .heart:hover {
-  animation: heart-animation 1s ease-in-out;
+  animation: heart-animation 1s infinite;
 }
 
 @keyframes heart-animation {
@@ -58,7 +62,7 @@ box-sizing: border-box;
   font-size: 2rem;
   padding-bottom: 10rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #ff0073;
+  color: #ff2644;
 }
 
 .line {
@@ -66,7 +70,7 @@ box-sizing: border-box;
   top: 3rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-bottom: 3px solid #ff0073;
+  border-bottom: 3px solid #ff2644;
   width: 0px;
   transition: 1s;
 }
@@ -81,7 +85,7 @@ box-sizing: border-box;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #ff0073;
+  background: #ff2644;
 }
 
 .meter{
@@ -95,14 +99,14 @@ box-sizing: border-box;
 
 .pushable {
   position: relative;
-  background: #ff0073;
+  background: #ff2644;
   width: 140px;
-  color: #fff;
+  color: #ffc5e6;
   font-weight: 600;
   font-size: 1.2rem;
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
-  border: 1px solid rgba(84, 69, 69, 0.3);
+  border: 1px solid #ffc5e6;
   border-radius: 10px;
   cursor: pointer;
   transition: filter 250ms;
@@ -127,6 +131,16 @@ box-sizing: border-box;
   90% {
     transform: scale(1);
   }
+}
+
+.clicked {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff2644;
 }
 
 /* about text :P */
