@@ -210,6 +210,15 @@ box-sizing: border-box;
 /*  RESPONSIVE WEB  */
 @media only screen and (max-width: 1200px) {
   .inner-container {
+    width: 60vw;
+  }
+  .question-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .inner-container {
     width: 90vw;
   }
   .question-text {
