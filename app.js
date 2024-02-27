@@ -9,20 +9,38 @@ const mainContent = `
   </h1>
   <span class="clicked"></span>
   <div class="btn-container">
-    <button class="pushable" id="positive">
+    <button class="pushable" id="positive" onClick="sayYes()">
       Yes
    </button>
-    <button class="pushable" id="negative" onClick="noClicked()">
+    <button class="pushable" id="negative" onClick="sayNo()">
       No
     </button>
   </div>
 `
 
-const noClicked = () => {
+const sayYesContent = `
+  <img src="./hasher.gif" class="hasher-gif" />
+  <img src="./kiss.gif" class="kiss-gif" />
+  <img src="./flykiss.gif" class="flykiss-gif" />
+  <img src="./pichu.gif" class="pichu-gif" />
+  <img src="./kissup.gif" class="kissup-gif" />
+  <img src="./loving.gif" class="loving-gif" />
+  <img src="./hug.gif" class="hug-gif" />
+  <div class="loveyou-text">
+    I Love you more than all my ex!!! <br />
+    Truth!!! 😭
+  </div>
+`
+
+const sayNo = () => {
   document.querySelector('.clicked').innerHTML = "No is No";
   setTimeout(() => {
     document.querySelector('.clicked').innerHTML = "";
   }, 5000);
+}
+
+const sayYes = () => {
+  innerContent.innerHTML = sayYesContent;
 }
 
 openBtn.addEventListener('click', () => {

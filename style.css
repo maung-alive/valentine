@@ -143,6 +143,69 @@ box-sizing: border-box;
   color: #ff2644;
 }
 
+/* YES */
+
+.kiss-gif {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 200px;
+  height: auto;
+}
+
+.hasher-gif {
+  position: fixed;
+  top: 23%;
+  left: 12%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.flykiss-gif {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+}
+
+.pichu-gif {
+  position: fixed;
+  bottom: 0;
+  left: 12px;
+}
+
+.hug-gif {
+  position: absolute;
+  bottom: 0;
+  left: 21px;
+  transform: translateY(20px);
+  width: 150px;
+}
+
+.kissup-gif {
+  position: absolute;
+  top: 0;
+  right: 20%;
+  transform: translateY(-100px);
+  width: 100px;
+}
+
+.loving-gif {
+  position: fixed;
+  top: 0;
+  right: 20%;
+  transform: rotate(-180deg);
+  width: 100px;
+}
+
+.loveyou-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem; 
+  line-height: 1.5rem;
+}
+
 /* about text :P */
 .about {
   position: fixed;
