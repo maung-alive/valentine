@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.inner-container {
+  position: relative;
+  background-color: aliceblue;
+  width: 40vw;
+  padding: 2px;
+  border-radius: 1rem;
+  transition: 1000ms;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: 500ms;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  background: #ff0073;
+  border: 4px solid aliceblue;
+  border-radius: 50%;
+  color: aliceblue;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  cursor: pointer;
+}
+
+.heart:hover {
+  animation: heart-animation 1s ease-in-out;
+}
+
+@keyframes heart-animation {
+  20% {
+    font-size: 1.2rem;
+  }
+  50% {
+    font-size: 1.5rem;
+  }
+  80% {
+    font-size: 1.2rem;
+  }
+}
+
+.question-text {
+  position: relative;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 10rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ff0073;
+}
+
+.line {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 3px solid #ff0073;
+  width: 0px;
+  transition: 1s;
+}
+
+.inner-container:hover .line {
+  width: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #ff0073;
+}
+
+.meter{
+  color: black;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pushable {
+  position: relative;
+  background: #ff0073;
+  width: 140px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border: 1px solid rgba(84, 69, 69, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 250ms;
+}
+
+.pushable#positive:hover {
+  filter: brightness(110%);
+  animation: heartbeat 1s forwards;
+}
+
+.pushable {
+  transition: transform 0.3s ease;
+}
+
+@keyframes heartbeat {
+  30% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(1);
+  }
+}
+
+/* about text :P */
+.about {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.about:hover {
+  color: #fff;
+}
