@@ -19,13 +19,13 @@ const mainContent = `
 `
 
 const sayYesContent = `
-  <img src="./hasher.gif" class="hasher-gif" />
-  <img src="./kiss.gif" class="kiss-gif" />
-  <img src="./flykiss.gif" class="flykiss-gif" />
-  <img src="./pichu.gif" class="pichu-gif" />
-  <img src="./kissup.gif" class="kissup-gif" />
-  <img src="./loving.gif" class="loving-gif" />
-  <img src="./hug.gif" class="hug-gif" />
+  <img src="./gifs/hasher.gif" class="hasher-gif" />
+  <img src="./gifs/kiss.gif" class="kiss-gif" />
+  <img src="./gifs/flykiss.gif" class="flykiss-gif" />
+  <img src="./gifs/pichu.gif" class="pichu-gif" />
+  <img src="./gifs/kissup.gif" class="kissup-gif" />
+  <img src="./gifs/loving.gif" class="loving-gif" />
+  <img src="./gifs/hug.gif" class="hug-gif" />
   <div class="loveyou-text">
     I Love you more than all my ex!!! <br />
     Truth!!! 😭
