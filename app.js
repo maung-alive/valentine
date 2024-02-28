@@ -32,8 +32,26 @@ const sayYesContent = `
   </div>
 `
 
+const noWords = [
+  "No is No",
+  "Are you sure about that?",
+  "I said No is No",
+  "No is always no",
+  "Why don't you think for me?",
+  "Why?? I am cute 🥺🥺",
+  "I love you 😭😭",
+  "I gonna cry 🙁",
+  "I will die, Don't!! 😭😭😭",
+  "Yap. I dead!",
+  "You should care me :(",
+  "Believe me I love you more than 3000 (What stupid iron suite guy said)",
+  "I love you in every time I breath ToT"
+]
+var noWordIndex = 0;
+
 const sayNo = () => {
-  document.querySelector('.clicked').innerHTML = "No is No";
+  document.querySelector('.clicked').innerHTML = noWords[noWordIndex];
+  noWordIndex += 1;
   setTimeout(() => {
     document.querySelector('.clicked').innerHTML = "";
   }, 5000);
