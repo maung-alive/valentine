@@ -62,8 +62,12 @@ const sayNo = () => {
 
 const sayYes = () => {
   let url = document.location.href.split('?');
-  let name = url[url.length - 1];
-  name = decodeURI(name);
+  if(url.length>1){
+    let name = url[url.length - 1];
+    name = decodeURI(name);
+  }else{
+    let name = '';
+  }
   innerContent.innerHTML = sayYesContent(name);
 }
 
