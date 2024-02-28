@@ -18,7 +18,7 @@ const mainContent = `
   </div>
 `
 
-const sayYesContent = `
+const sayYesContent = (name) => `
   <img src="./gifs/hasher.gif" class="hasher-gif" />
   <img src="./gifs/kiss.gif" class="kiss-gif" />
   <img src="./gifs/flykiss.gif" class="flykiss-gif" />
@@ -28,7 +28,7 @@ const sayYesContent = `
   <img src="./gifs/hug.gif" class="hug-gif" />
   <div class="loveyou-text">
     Yayy!!!!<br />
-    I love you tooooooo <span class="name">Hannah</span>!<br />
+    I love you tooooooo <span class="name">${name}</span>!<br />
     I Love you more than all my ex!!! <br />
     Truth!!! 😭
   </div>
@@ -61,7 +61,9 @@ const sayNo = () => {
 }
 
 const sayYes = () => {
-  innerContent.innerHTML = sayYesContent;
+  const url = document.location.href.split('/');
+  const name = url[url.length - 1];
+  innerContent.innerHTML = sayYesContent(name);
 }
 
 openBtn.addEventListener('click', () => {
