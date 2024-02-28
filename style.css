@@ -79,6 +79,13 @@ box-sizing: border-box;
   width: 50%;
 }
 
+.name {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.5rem;
+  color:#ff2644;
+  font-weight: 500;
+}
+
 .container {
   display: flex;
   flex-direction: column;
