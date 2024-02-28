@@ -54,7 +54,7 @@ var noWordIndex = 0;
 
 const sayNo = () => {
   document.querySelector('.clicked').innerHTML = noWords[noWordIndex];
-  if(noWordIndex == noWords.length){
+  if(noWordIndex+1 == noWords.length){
     noWordIndex = 0;
   }
   noWordIndex += 1;
