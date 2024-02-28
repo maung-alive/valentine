@@ -27,6 +27,8 @@ const sayYesContent = `
   <img src="./gifs/loving.gif" class="loving-gif" />
   <img src="./gifs/hug.gif" class="hug-gif" />
   <div class="loveyou-text">
+    Yayy!!!!<br />
+    I love you tooooooo <span class="name">Hannah</span>!<br />
     I Love you more than all my ex!!! <br />
     Truth!!! 😭
   </div>
@@ -47,14 +49,15 @@ const noWords = [
   "Believe me I love you more than 3000 (What stupid iron suite guy said)",
   "I love you in every time I breath ToT"
 ]
+
 var noWordIndex = 0;
 
 const sayNo = () => {
   document.querySelector('.clicked').innerHTML = noWords[noWordIndex];
+  if(noWordIndex == noWords.length){
+    noWordIndex = 0;
+  }
   noWordIndex += 1;
-  setTimeout(() => {
-    document.querySelector('.clicked').innerHTML = "";
-  }, 5000);
 }
 
 const sayYes = () => {
